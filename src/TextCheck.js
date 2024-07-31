@@ -17,3 +17,4 @@ function TestClass() {
     alert("Statement is false");
   }
 }
+export default TestClass
