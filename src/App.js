@@ -1,42 +1,33 @@
-import React, { useState } from "react";
-
-import "./App.css";
 
 function App() {
-
-  const list = [
-    "Banana",
-    "Apple",
-    "Orange",
-    "Mango",
-    "Pineapple",
-    "Watermelon"
-    
-  ];
-  const [filter, setFilter] = useState(list)
-
-  const search = (event) => {
-    
-    if (event.target.value === "") {
-      setFilter(list)
-      return
-    }
-    const filterSearch = list.filter((item) => 
-      item.toLowerCase().indexOf(event.target.value.toLowerCase()) !== -1
-    )
-    setFilter(filterSearch)
+  let input, number, str ;
+  str = "number 1:";
+  while (true) {
+      input = prompt(str);
+      if ((number = +input) !== parseFloat(input) || !Number.isFinite(number))
+          alert("введено не число");
+      else break;
   }
+  let num1 = number;
 
-  return <>
-  <div>
-      Search <input name="query" type="text" onChange={search} />
-  </div>
-  <div>
-    {filter.map((fruit, key) => ( 
-      <div key={key}>{fruit}</div>
-    ))}
-  </div>
-  </>
+  str = "number 2:";
+  while (true) {
+      input = prompt(str);
+      if ((number = +input) !== parseFloat(input) || !Number.isFinite(number))
+          alert("введено не число");
+      else break;
+  }
+  let num2 = number;
+
+  if (num1 > num2) {
+      alert("Первое число больше второго");
+  }
+  else if (num1 < num2) {
+      alert("Второе число больше первого");
+  }
+  else {
+      alert("числа равны");
+  }
 }
 
 export default App;
