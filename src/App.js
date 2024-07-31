@@ -1,6 +1,6 @@
 
 function App() {
-  let input, number, str ;
+  let input, number, str, text;
   str = "number 1:";
   while (true) {
       input = prompt(str);
