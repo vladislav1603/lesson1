@@ -5,7 +5,7 @@ function TestClass() {
  
  
   if (str1.equals(str2)) {
-      alert("Statement is true");
+    alert("Statement is true");
   } else {
     alert("Statement is false");
   }
