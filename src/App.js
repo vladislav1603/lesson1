@@ -28,6 +28,10 @@ let input, number, str;
   else {
       alert("числа равны");
   }
+  alert(num1 + num2);
+  alert(num1 - num2);
+  alert(num1 * num2);
+  alert(num1 / num2);
 }
 
 export default App;
