@@ -2,22 +2,31 @@ import {useState} from 'react'
 
 function App() {
 
-const str1 = "Java";
-const str2 = "Java";
-const str3 = "C++";
+  let input, text, str;
+  str = "text 1:";
+  while (true) {
+      input = prompt(str);
+      if ((text = +input) === parseFloat(input))
+          alert("введен не текст");
+      else break;
+  }
+  let num1 = text.toString();
 
+  str = "text 2:";
+  while (true) {
+      input = prompt(str);
+      if ((text = +input) === parseFloat(input))
+          alert("введен не текст");
+      else break;
+  }
+  let num2 = text.toString();
 
-if (str1.equals(str2)) {
-  alert("Statement is true");
-} else {
-  alert("Statement is false");
-}
-
-if(str1.equals(str3)) {
-  alert("Statement is true");
-} else {
-  alert("Statement is false");
-}
+  if (num1 == num2) {
+      alert("тексты равны");
+  }
+  else {
+      alert("тексты не равны");
+  }
 }
 
 export default App;
